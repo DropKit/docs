@@ -51,12 +51,9 @@ command::publish-gh() {
     echo "Version: ${version}"
     echo "User: ${user}"
 
-    # generate versioned docs
-    cd website
-    sed -i "" "/${version}/d" versions.json
-    yarn run version ${version}
-
     # publish current docs
+    cd website
+
     GIT_USER=${user} \
     CURRENT_BRANCH=master \
     USE_SSH=true \
