@@ -82,17 +82,18 @@
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Result</td><td>string</td><td>Status code</td></tr>
+<tr><td>Code</td><td>number</td><td>Response code</td></tr>
+<tr><td>Message</td><td>string</td><td>Response message</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="status-code"></a><a href="#status-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Status Code</h4>
+<h4><a class="anchor" aria-hidden="true" id="response-code"></a><a href="#response-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Code</h4>
 <table>
 <thead>
-<tr><th>Code</th><th>Reason</th></tr>
+<tr><th>Code</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>200</td><td>Success</td></tr>
-<tr><td>401</td><td>Unauthorized</td></tr>
+<tr><td>0</td><td>Success</td></tr>
+<tr><td>20201</td><td>Unauthorized</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="sample-input"></a><a href="#sample-input" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Input</h4>
@@ -104,7 +105,8 @@
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="sample-response"></a><a href="#sample-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Response</h4>
 <pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"Result"</span>: <span class="hljs-string">"200"</span>
+    <span class="hljs-attr">"Code"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"Message"</span>: <span class="hljs-string">"Ok"</span>
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="curl-example"></a><a href="#curl-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>curl Example</h4>
@@ -116,7 +118,7 @@
     "caller_pk": "00000000000000000000000000000000000000000000000000000000000000000000"
 }'</span>
 
-{<span class="hljs-string">"Result"</span>:<span class="hljs-string">"200"</span>}
+{<span class="hljs-string">"Code"</span>: 0,<span class="hljs-string">"Message"</span>: <span class="hljs-string">"Ok"</span>}
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="apiauthrevoke"></a><a href="#apiauthrevoke" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>/api/auth/revoke</code></h3>
 <p>Revoke user permission to interact with a specific table.</p>
@@ -138,17 +140,18 @@
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Result</td><td>string</td><td>Status code</td></tr>
+<tr><td>Code</td><td>number</td><td>Response code</td></tr>
+<tr><td>Message</td><td>string</td><td>Response message</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="status-code-1"></a><a href="#status-code-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Status Code</h4>
+<h4><a class="anchor" aria-hidden="true" id="response-code-1"></a><a href="#response-code-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Code</h4>
 <table>
 <thead>
-<tr><th>Code</th><th>Reason</th></tr>
+<tr><th>Code</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>200</td><td>Success</td></tr>
-<tr><td>401</td><td>Unauthorized</td></tr>
+<tr><td>0</td><td>Success</td></tr>
+<tr><td>20201</td><td>Unauthorized</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="sample-input-1"></a><a href="#sample-input-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Input</h4>
@@ -160,7 +163,8 @@
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="sample-response-1"></a><a href="#sample-response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Response</h4>
 <pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"Result"</span>: <span class="hljs-string">"200"</span>
+    <span class="hljs-attr">"Code"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"Message"</span>: <span class="hljs-string">"Ok"</span>
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="curl-example-1"></a><a href="#curl-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>curl Example</h4>
@@ -172,7 +176,7 @@
     "caller_pk": "00000000000000000000000000000000000000000000000000000000000000000000"
 }'</span>
 
-{<span class="hljs-string">"Result"</span>:<span class="hljs-string">"200"</span>}
+{<span class="hljs-string">"Code"</span>: 0,<span class="hljs-string">"Message"</span>: <span class="hljs-string">"Ok"</span>}
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="apiauthverify"></a><a href="#apiauthverify" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>/api/auth/verify</code></h3>
 <p>Verify the user has permissions</p>
@@ -194,18 +198,19 @@
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Result</td><td>string</td><td>Status code</td></tr>
+<tr><td>Code</td><td>number</td><td>Response code</td></tr>
+<tr><td>Message</td><td>string</td><td>Response message</td></tr>
 <tr><td>Response</td><td>bool</td><td>Verify result</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="status-code-2"></a><a href="#status-code-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Status Code</h4>
+<h4><a class="anchor" aria-hidden="true" id="response-code-2"></a><a href="#response-code-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Code</h4>
 <table>
 <thead>
-<tr><th>Code</th><th>Reason</th></tr>
+<tr><th>Code</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>200</td><td>Success</td></tr>
-<tr><td>401</td><td>Unauthorized</td></tr>
+<tr><td>0</td><td>Success</td></tr>
+<tr><td>20201</td><td>Unauthorized</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="sample-input-2"></a><a href="#sample-input-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Input</h4>
@@ -217,7 +222,8 @@
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="sample-response-2"></a><a href="#sample-response-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Response</h4>
 <pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"Result"</span>: <span class="hljs-string">"200"</span>,
+    <span class="hljs-attr">"Code"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"Message"</span>: <span class="hljs-string">"Ok"</span>,
     <span class="hljs-attr">"Response"</span>: <span class="hljs-literal">true</span>
 }
 </code></pre>
@@ -230,6 +236,6 @@
     "caller_pk": "00000000000000000000000000000000000000000000000000000000000000000000"
 }'</span>
 
-{<span class="hljs-string">"Result"</span>:<span class="hljs-string">"200"</span>,<span class="hljs-string">"Response"</span>:<span class="hljs-literal">true</span>}
+{<span class="hljs-string">"Code"</span>: 0,<span class="hljs-string">"Message"</span>: <span class="hljs-string">"Ok"</span>,<span class="hljs-string">"Response"</span>: <span class="hljs-literal">true</span>}
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api_database"><span class="arrow-prev">← </span><span>Database</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods">Methods</a></li><li><a href="#reference">Reference</a><ul class="toc-headings"><li><a href="#apiauthgrant"><code>/api/auth/grant</code></a></li><li><a href="#apiauthrevoke"><code>/api/auth/revoke</code></a></li><li><a href="#apiauthverify"><code>/api/auth/verify</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/about">About</a><a href="/docs/api_database">Usage</a></div><div><h5>More</h5><a href="https://github.com/DropKit">GitHub</a></div></section><section class="copyright">Copyright © 2020 BiiLabs.io</section></footer></div></body></html>
