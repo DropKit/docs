@@ -33,14 +33,16 @@ Content Type: `application/json`
 
 | Name         | Type   | Description             |
 | ------------ | ------ | ----------------------- |
-| Result       | string | Status code             |
-| Hash         | string | Audit log hash          |
+| Code         | number | Response code           |
+| Message      | string | Response message        |
+| Audit        | string | Audit log hash          |
 
-#### Status Code
+#### Response Code
 
-| Code         | Reason                       |
+| Code         | Description                  |
 | ------------ | ---------------------------- |
-| 200          | Success                      |
+| 0            | Success                      |
+| 20101        | Unauthorized                 |
 
 #### Sample Input
 
@@ -55,8 +57,9 @@ Content Type: `application/json`
 
 ```json
 {
-    "Result": "200",
-    "Hash": "0x00aef6d98c481201d19a029361d30e723bb7b2ce7155eff0406abec76a47f64b"
+    "Code": 0,
+    "Message": "Ok",
+    "Audit": "0x6eb3bc317d8bcb363d7f60f54e3f1503cdb80d82b3f3b775b3186a4a5262a626"
 }
 ```
 
@@ -70,7 +73,7 @@ curl http://localhost:5000/api/db/create \
     "caller_pk": "00000000000000000000000000000000000000000000000000000000000000000000"
 }'
 
-{"Result":"200","Hash":"0xb6e1904ece14858b5ce3092eb4ac91e6d8a73151aab91e2fa93fedab22b9833c"}
+{"Code": 0,"Message": "Ok","Audit": "0x6eb3bc317d8bcb363d7f60f54e3f1503cdb80d82b3f3b775b3186a4a5262a626"}
 ```
 
 ### `/api/db/insert`
@@ -94,15 +97,16 @@ Content Type: `application/json`
 
 | Name         | Type   | Description             |
 | ------------ | ------ | ----------------------- |
-| Result       | string | Status code             |
-| Hash         | string | Audit log hash          |
+| Code         | number | Response code           |
+| Message      | string | Response message        |
+| Audit        | string | Audit log hash          |
 
-#### Status Code
+#### Response Code
 
-| Code         | Reason                       |
+| Code         | Description                  |
 | ------------ | ---------------------------- |
-| 200          | Success                      |
-| 401          | Unauthorized                 |
+| 0            | Success                      |
+| 20101        | Unauthorized                 |
 
 #### Sample Input
 
@@ -117,8 +121,9 @@ Content Type: `application/json`
 
 ```json
 {
-    "Result": "200",
-    "Hash": "0x00aef6d98c481201d19a029361d30e723bb7b2ce7155eff0406abec76a47f64b"
+    "Code": 0,
+    "Message": "Ok",
+    "Audit": "0x6eb3bc317d8bcb363d7f60f54e3f1503cdb80d82b3f3b775b3186a4a5262a626"
 }
 ```
 
@@ -132,7 +137,7 @@ curl http://localhost:5000/api/db/insert \
     "caller_pk": "00000000000000000000000000000000000000000000000000000000000000000000"
 }'
 
-{"Result":"200","Hash":"0xb6e1904ece14858b5ce3092eb4ac91e6d8a73151aab91e2fa93fedab22b9833c"}
+{"Code": 0,"Message": "Ok","Audit": "0x6eb3bc317d8bcb363d7f60f54e3f1503cdb80d82b3f3b775b3186a4a5262a626"}
 ```
 
 ### `/api/db/select`
@@ -156,16 +161,17 @@ Content Type: `application/json`
 
 | Name         | Type   | Description             |
 | ------------ | ------ | ----------------------- |
-| Result       | string | Status code             |
-| Response     | json   | Database response       |
-| Hash         | string | Audit log hash          |
+| Code         | number | Response code           |
+| Message      | string | Response message        |
+| Data         | list   | Database response       |
+| Audit        | string | Audit log hash          |
 
-#### Status Code
+#### Response Code
 
-| Code         | Reason                       |
+| Code         | Description                  |
 | ------------ | ---------------------------- |
-| 200          | Success                      |
-| 401          | Unauthorized                 |
+| 0            | Success                      |
+| 20101        | Unauthorized                 |
 
 #### Sample Input
 
@@ -180,15 +186,16 @@ Content Type: `application/json`
 
 ```json
 {
-    "Result": "200",
-    "Response": [
+    "Code": 0,
+    "Message": "Ok",
+    "Data": [
         {
             "age": 35,
             "language": "Go",
             "name": "John"
         }
     ],
-    "Hash": "0x009ba272ddb8cca1872bb1648cd007624dec77d7ef458849e66dc820b7395aa3"
+    "Audit": "0x19c5a417c739977c39dfefc7cd86762e3a6ba2cac7beba5f77452814fd2a613a"
 }
 ```
 
@@ -202,5 +209,5 @@ curl http://localhost:5000/api/db/select \
     "caller_pk": "00000000000000000000000000000000000000000000000000000000000000000000"
 }'
 
-{"Result":"200","Response":[{"age":35,"language":"Go","name":"John"}],"Hash":"0x7712bc8ffc05a11ac75f0ad2367c6bf775e9855549a07ef88d731e1f46b814ed"}
+{"Code": 0,"Message": "Ok","Data": [{"age": 35,"language": "Go","name": "John"}],"Audit": "0x19c5a417c739977c39dfefc7cd86762e3a6ba2cac7beba5f77452814fd2a613a"}
 ```

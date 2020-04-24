@@ -30,14 +30,15 @@ Content Type: `application/json`
 
 | Name         | Type   | Description             |
 | ------------ | ------ | ----------------------- |
-| Result       | string | Status code             |
+| Code         | number | Response code           |
+| Message      | string | Response message        |
 
-#### Status Code
+#### Response Code
 
-| Code         | Reason                       |
+| Code         | Description                  |
 | ------------ | ---------------------------- |
-| 200          | Success                      |
-| 401          | Unauthorized                 |
+| 0            | Success                      |
+| 20201        | Unauthorized                 |
 
 #### Sample Input
 
@@ -53,7 +54,8 @@ Content Type: `application/json`
 
 ```json
 {
-    "Result": "200"
+    "Code": 0,
+    "Message": "Ok"
 }
 ```
 
@@ -68,7 +70,7 @@ curl http://localhost:5000/api/auth/grant \
     "caller_pk": "00000000000000000000000000000000000000000000000000000000000000000000"
 }'
 
-{"Result":"200"}
+{"Code": 0,"Message": "Ok"}
 ```
 
 ### `/api/auth/revoke`
@@ -89,14 +91,15 @@ Content Type: `application/json`
 
 | Name         | Type   | Description             |
 | ------------ | ------ | ----------------------- |
-| Result       | string | Status code             |
+| Code         | number | Response code           |
+| Message      | string | Response message        |
 
-#### Status Code
+#### Response Code
 
-| Code         | Reason                       |
+| Code         | Description                  |
 | ------------ | ---------------------------- |
-| 200          | Success                      |
-| 401          | Unauthorized                 |
+| 0            | Success                      |
+| 20201        | Unauthorized                 |
 
 #### Sample Input
 
@@ -112,7 +115,8 @@ Content Type: `application/json`
 
 ```json
 {
-    "Result": "200"
+    "Code": 0,
+    "Message": "Ok"
 }
 ```
 
@@ -127,7 +131,7 @@ curl http://localhost:5000/api/auth/revoke \
     "caller_pk": "00000000000000000000000000000000000000000000000000000000000000000000"
 }'
 
-{"Result":"200"}
+{"Code": 0,"Message": "Ok"}
 ```
 
 ### `/api/auth/verify`
@@ -148,15 +152,16 @@ Content Type: `application/json`
 
 | Name         | Type   | Description             |
 | ------------ | ------ | ----------------------- |
-| Result       | string | Status code             |
+| Code         | number | Response code           |
+| Message      | string | Response message        |
 | Response     | bool   | Verify result           |
 
-#### Status Code
+#### Response Code
 
-| Code         | Reason                       |
+| Code         | Description                  |
 | ------------ | ---------------------------- |
-| 200          | Success                      |
-| 401          | Unauthorized                 |
+| 0            | Success                      |
+| 20201        | Unauthorized                 |
 
 #### Sample Input
 
@@ -172,7 +177,8 @@ Content Type: `application/json`
 
 ```json
 {
-    "Result": "200",
+    "Code": 0,
+    "Message": "Ok",
     "Response": true
 }
 ```
@@ -188,5 +194,5 @@ curl http://localhost:5000/api/auth/verify \
     "caller_pk": "00000000000000000000000000000000000000000000000000000000000000000000"
 }'
 
-{"Result":"200","Response":true}
+{"Code": 0,"Message": "Ok","Response": true}
 ```
